@@ -17,7 +17,8 @@ class Neo4j2m03 < Formula
     libexec.install Dir['*']
 
     # Symlink binaries
-    bin.install_symlink Dir["#{libexec}/bin/neo4j{,-shell}"]
+    bin.install_symlink "#{libexec}/bin/neo4j" => "neo4j-2m03"
+    bin.install_symlink "#{libexec}/bin/neo4j-shell" => "neo4j-2m03-shell"
 
     # Adjust UDC props
     open("#{libexec}/conf/neo4j-wrapper.conf", 'a') { |f|
@@ -32,7 +33,7 @@ class Neo4j2m03 < Formula
     Quick-start guide:
 
         1. Start the server manually:
-            neo4j start
+            neo4j-2m03 start
 
         2. Open webadmin:
             open http://localhost:7474/webadmin/
@@ -41,7 +42,7 @@ class Neo4j2m03 < Formula
             curl -v http://localhost:7474/db/data/
 
         4. Stop:
-            neo4j stop
+            neo4j-2m03 stop
 
     To launch on startup, install launchd-agent to ~/Library/LaunchAgents/ with:
         neo4j install
