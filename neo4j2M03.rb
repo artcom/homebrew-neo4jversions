@@ -1,6 +1,6 @@
 require 'formula'
 
-class Neo4j < Formula
+class Neo4j2M03 < Formula
   homepage 'http://neo4j.org'
   url 'http://dist.neo4j.org/neo4j-community-2.0.0-M03-unix.tar.gz'
   sha1 'be4695ba51579c68ccdfb3b0ec3ccaec0f51b26e'
