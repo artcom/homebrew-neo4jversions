@@ -1,4 +1,4 @@
-class Neo4j < Formula
+class Neo4j234 < Formula
   desc "Robust (fully ACID) transactional property graph database"
   homepage "http://neo4j.com"
   url "http://dist.neo4j.org/neo4j-community-2.3.4-unix.tar.gz"
