@@ -13,15 +13,14 @@ class Neo4j234 < Formula
     # Remove windows files
     rm_f Dir["bin/*.bat"]
 
-    # Fix Java detection to work with 1.8
-    # https://github.com/neo4j/neo4j/issues/6895
-    inreplace "bin/utils", "java_home -v 1.7", "java_home -v 1.7+" if build.stable?
-
     # Install jars in libexec to avoid conflicts
     libexec.install Dir["*"]
 
     # Symlink binaries
-    bin.install_symlink Dir["#{libexec}/bin/neo4j{,-shell,-import}"]
+    #bin.install_symlink Dir["#{libexec}/bin/neo4j-{,-shell,-import}"]
+    bin.install_symlink "#{libexec}/bin/neo4j" => "neo4j-234"
+    bin.install_symlink "#{libexec}/bin/neo4j-shell" => "neo4j-234-shell"
+    bin.install_symlink "#{libexec}/bin/neo4j-import" => "neo4j-234-import"
 
     # Adjust UDC props
     # Suppress the empty, focus-stealing java gui.
