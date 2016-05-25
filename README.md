@@ -1,4 +1,4 @@
-Homebrew-neo4j-versions
+Homebrew-neo4jversions
 ============
 This repository contains Formulae for older versions of the neo4j graph database.
 
@@ -8,10 +8,11 @@ Current Versions
 ----------------
 * neo4j-2.0.0-M03
 * neo4j-2.1.8
+* neo4j-2.3.4
 
-Installing Homebrew-neo4j-versions Formulae
+Installing Homebrew-neo4jversions Formulae
 --------------------------------
-Just `brew tap artcom/neo4j-versions` and then `brew install <formula>`.
+Just `brew tap artcom/neo4jversions` and then `brew install <formula>`.
 
 Docs
 ----
